@@ -1,0 +1,57 @@
+ *{
+    font-family: Verdana, Geneva, Tahoma, sans-serif, Times, serif, 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+}
+
+
+.container{
+    color:white;
+    margin:auto;
+    margin-top: 50px;
+    background-image:linear-gradient(to right, rgb(8, 8, 8), rgb(36, 19, 82));
+    width:500px;
+    min-height: 90vh;
+    overflow: hidden;
+}
+h1{
+    font-size: 30px;
+    margin:30px auto;
+    text-align: center;
+    width:100%;
+    border-bottom:3px solid rgb(255, 255, 255);
+}
+
+
+
+.todo-add{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    justify-content: center;    
+}
+.todo-input, .todo-button{
+    padding: 20px;
+    
+}
+.todo-input{
+    border-radius: 20px;
+    margin-left:20px;
+    margin-bottom: 10px;
+    width:80%;
+}
+.todo-button{
+    border-radius: 20px;
+    width:50%;
+    background-color:rgb(213, 247, 213);
+    font-size: larger;
+    font-weight: 1200;
+    margin-left:120px;
+}
+.todo-button:hover{
+    background-color: lightgreen;
+} 
+
+
+
+
+
