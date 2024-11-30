@@ -1,6 +1,7 @@
 
 import { FaRegCheckCircle } from "react-icons/fa";
 import { RiDeleteBinLine } from "react-icons/ri";
+import { MdDeleteForever } from "react-icons/md";
 import style from'./todo.module.css';
 import { useState,useEffect } from 'react';
 
@@ -34,6 +35,13 @@ export function Todo(){
         setValue((pre)=>[...pre,input]);
         setinput("");
     }
+
+    function handleDeleteItem(val){
+        setValue(value.filter((i)=>i !== val))
+    }
+    function handleClearData(){
+        setValue([]);
+    }
         
     return(<>
     <div className={style.container}>
@@ -54,15 +62,18 @@ export function Todo(){
         </form>
         </section>
         <section>
-            <ul>
+            <ul className={style.ulList}>
                 {
-                    value.map((i,index)=>{ return(<li key={index}> <span>{i}</span> 
-                    <button><FaRegCheckCircle /></button>
-                    <button><RiDeleteBinLine /></button>
+                    value.map((i,index)=>{ return(<li className={style.liList} key={index}> <span>{i}</span> 
+                    <button className={style.ibtn}><FaRegCheckCircle className={style.icons1}/></button>
+                    <button className={style.ibtn} onClick={()=>handleDeleteItem(i)}><MdDeleteForever className={style.icons2} /></button>
                     </li> ) }
 
                 )}
             </ul>
+        </section>
+        <section>
+            <button onClick={handleClearData} id={style.clearBtn}>Clear Data</button>
         </section>
     </div>
     </>);
