@@ -2,12 +2,28 @@
 import { FaRegCheckCircle } from "react-icons/fa";
 import { RiDeleteBinLine } from "react-icons/ri";
 import style from'./todo.module.css';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 
 export function Todo(){
     const [input,setinput]=useState("");
     const [value,setValue]= useState([]);
+    const [timeDate,setTimeDate]= useState("");
+    
 
+    function handleTime(){
+        const timezone = new Date();
+        const date =timezone.toLocaleDateString();
+        const time = timezone.toLocaleTimeString();
+        setTimeDate(`${date} - ${time}`)
+        
+    }
+    useEffect(()=>{
+        const i = setInterval(()=>{
+            handleTime();
+        },1000);
+        return ()=>clearInterval(i);
+    },[]);
+    
     function handleChange(e){
         setinput(e.target.value);
     }
@@ -18,15 +34,15 @@ export function Todo(){
         setValue((pre)=>[...pre,input]);
         setinput("");
     }
-
+        
     return(<>
     <div className={style.container}>
         <section>
             <header>
                 <h1> TODO Appliation </h1>
+                <h2>{timeDate}</h2>
             </header>
         </section>
-
         <section >
             <form className={style[`todo-add`]} onSubmit={handleClick}>
                 <div>
@@ -48,7 +64,6 @@ export function Todo(){
                 )}
             </ul>
         </section>
-
     </div>
     </>);
 }
