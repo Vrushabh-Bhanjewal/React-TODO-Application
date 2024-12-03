@@ -47,6 +47,7 @@ h2{
     margin-bottom: 10px;
     width:80%;
     font-size: 25px;
+    background-color: aliceblue;
 }
 .todo-button{
     border-radius: 20px;
@@ -88,7 +89,7 @@ h2{
     font-weight: bolder;
 }
 #clearBtn:hover{
-    background-color: brown;
+    background-color: rgb(237, 223, 27);
     color:black;
 }
 .icons2{
@@ -109,11 +110,13 @@ top: 8px;
     background-color: transparent;
     border: none; 
     /* float:right; */
-    display: inline-block;
-    
+    display: inline-block;  
 }
-
-
-
-
-
+/* --------- */
+.check{
+    text-decoration: line-through;
+    background-color: aquamarine;
+}
+.notcheck{
+    text-decoration: none;
+}

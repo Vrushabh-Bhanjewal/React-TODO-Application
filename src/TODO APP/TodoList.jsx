@@ -1,13 +1,15 @@
 import { FaRegCheckCircle } from "react-icons/fa";
 import { MdDeleteForever } from "react-icons/md";
 import style from './todo.module.css';
-export function TodoList({i,index,handleDeleteItem}){
-
-
+export function TodoList({data,check,handleCheckItem, handleDeleteItem}){
     return(
-        <li className={style.liList} key={index}> <span>{i}</span> 
-        <button className={style.ibtn}><FaRegCheckCircle className={style.icons1}/></button>
-        <button className={style.ibtn} onClick={()=>handleDeleteItem(i)}><MdDeleteForever className={style.icons2} /></button>
+        <li className={style.liList}  > <span className={check ?style.check : style.notcheck} >{data}</span> 
+        <button className={style.ibtn} onClick={()=>handleCheckItem(data)} >
+            <FaRegCheckCircle className={style.icons1}/>
+        </button>
+        <button className={style.ibtn} onClick={()=>handleDeleteItem(data)}>
+            <MdDeleteForever className={style.icons2} />
+        </button>
         </li>
     );
 }
