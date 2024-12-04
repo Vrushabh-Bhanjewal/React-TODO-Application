@@ -5,10 +5,10 @@ import { useState } from 'react';
 import { TodoForm } from "./Todo_Form";
 import { TodoDate } from "./TodoDate";
 import { TodoList } from "./TodoList";
+import { getLocalData, setLocalData } from './localData';
 
 export function Todo(){
-    
-    const [value,setValue]= useState([]);
+    const [value,setValue]= useState(()=>getLocalData());
 
     function handleDeleteItem(val){
         setValue(value.filter((data)=>data.content !== val))
@@ -32,7 +32,10 @@ export function Todo(){
         const add = value.find((cur)=> cur.content ===content);
         if (add) {return;}
         setValue((pre)=>[...pre,{ id,content,check}]);
-    }    
+    }  
+    // call local set data method
+    setLocalData(value);
+
     return(<>
     <div className={style.container}>
         <section>

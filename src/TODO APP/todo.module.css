@@ -107,15 +107,18 @@ top: 8px;
     top: 10px;
 }
 .ibtn{
-    background-color: transparent;
+    background-color: white;
     border: none; 
     /* float:right; */
     display: inline-block;  
 }
+#icon-bar{
+    background-color: white;
+}
 /* --------- */
 .check{
     text-decoration: line-through;
-    background-color: aquamarine;
+    background-color: coral;
 }
 .notcheck{
     text-decoration: none;
