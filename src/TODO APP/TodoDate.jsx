@@ -16,7 +16,7 @@ export function TodoDate(){
         },1000);
         return ()=>clearInterval(i);
     },[]);
-
+    
     return(
         <h2>{timeDate}</h2>
     );

@@ -1,0 +1,38 @@
+@font-face {
+    font-family:"vrushabh" ;
+    src:url(../PlayfairDisplay-VariableFont_wght.ttf)
+}
+.container{
+    background-color: white;
+    width:400px;
+    padding:10px 20px;
+    display:flex;
+    flex-direction: column;
+    font-family: "vrushabh","Playfair Display";
+    margin:auto;
+    margin-top: 5rem;
+    box-shadow: 5px 3px 20px 5px rgb(151, 150, 150);
+}
+.title{
+    font-size: 28px;
+    font-variant: small-caps;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.7;
+}
+.submit{
+    margin: 20px 0;
+    background-color: aliceblue;
+    border: 1px solid rgb(68, 193, 243);
+    padding: 5px;
+}
+input:focus{
+background-color: aliceblue;
+}
+.submit:hover{
+    background-image: linear-gradient(to right, #00c9ff 0%,#92fe9d  100%);
+}

@@ -33,14 +33,15 @@ export function Todo(){
         if (add) {return;}
         setValue((pre)=>[...pre,{ id,content,check}]);
     }  
+    
     // call local set data method
     setLocalData(value);
-
+    
     return(<>
     <div className={style.container}>
         <section>
             <header> 
-                <h1> TODO APPLICATION </h1>
+                <h1 className={style.titleh}> Todo Application </h1>
                 <TodoDate />
             </header>
         </section>
@@ -65,6 +66,7 @@ export function Todo(){
         <section>
             <button onClick={handleClearData} id={style.clearBtn}>Clear Data</button>
         </section>
+        
     </div>
     </>);
 }

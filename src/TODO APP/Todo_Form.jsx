@@ -4,7 +4,7 @@ import style from './todo.module.css';
 export function TodoForm({setForm}){
 
     const [input,setinput]=useState("");
-
+    
     function handleChange(value){
         setinput({id:value, content:value, check:false});
     }
