@@ -5,16 +5,29 @@ import { Form } from './Form/Form.jsx'
 import { FormReact } from './Form/FormReact.jsx'
 import { Login } from './Form/Login.jsx'
 import { ContactForm } from './Form/ContactForm.jsx'
+import { Effect } from './Effect/Effect.jsx'
+import { EffectChallange } from './Effect/EffectChalange.jsx'
+import { Fetch } from './Effect/Fetch.jsx'
+import { Pokemon } from './Pokemon/pokemon.jsx'
+
 function App() {
   
   return (
     <>
       {/* <Todo/> */}
-      <Counter /> 
+
+      {/* <Counter />  */}
+
       {/* <Form /> */}
       {/* <FormReact /> */}
       {/* <Login /> */}
       {/* <ContactForm/> */}
+
+      {/* <Effect /> */}
+      {/* <EffectChallange /> */}
+
+      {/* <Fetch/> */}
+      <Pokemon />
     </>
   )
 }

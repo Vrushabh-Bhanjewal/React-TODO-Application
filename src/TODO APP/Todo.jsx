@@ -33,7 +33,6 @@ export function Todo(){
         if (add) {return;}
         setValue((pre)=>[...pre,{ id,content,check}]);
     }  
-    
     // call local set data method
     setLocalData(value);
     
